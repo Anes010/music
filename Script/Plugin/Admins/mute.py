@@ -5,10 +5,10 @@ import asyncio
 from Script.Cache.admin_check import *
 
 from Script.Plugin.Helpers.queues import QUEUE
+from Script.Config import OWNER_ID
 
 
-
-@bot.on_message(filters.command("mute") & filters.group)
+@bot.on_message(filters.command("mute") & filters.group & filters.user(OWNER_ID))
 @is_admin
 async def mute(_, message):
     await message.delete()
