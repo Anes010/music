@@ -3,13 +3,13 @@ from Script.assistant.TgCalls.Clients import bot, user
 from pyrogram import filters
 
 import asyncio
-
+from Script.Config import OWNER_ID
 from Script.Cache.admin_check import *
 
-from Script.Plugin.Helpers.queues import QUEUE
+from Script.Plugin.Helpers.Player import QUEUE
 
 
-@bot.on_message(filters.command("unmute") & filters.group)
+@bot.on_message(filters.command("unmute") & filters.group & filters.user(OWNER_ID))
 @is_admin
 async def unmute(_, message):
     await message.delete()
