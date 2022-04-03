@@ -6,7 +6,7 @@ from Script.assistant.TgCalls.Clients import bot, user
 
 from pyrogram import filters
 
-
+from Script.Config import OWNER_ID
 
 from Script.Cache.admin_check import *
 
@@ -14,7 +14,7 @@ LIVE_CHATS = []
 
 
 
-@bot.on_message(filters.command(["stop", "end"]) & filters.group)
+@bot.on_message(filters.command(["stop", "end"]) & filters.group & filters.user(OWNER_ID))
 @is_admin
 async def end(_, message):
     await message.delete()
