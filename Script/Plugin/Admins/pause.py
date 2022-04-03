@@ -1,15 +1,15 @@
 from Script.assistant.TgCalls.Clients import bot, user
 
 from pyrogram import filters
-
+from Script.Config import OWNER_ID
 import asyncio
 
 from Script.Cache.admin_check import *
 
-from Script.Plugin.Helpers.queues import QUEUE
+from Script.Plugin.Helpers.Player import QUEUE
 
 
-@bot.on_message(filters.command("pause") & filters.group)
+@bot.on_message(filters.command("pause") & filters.group & filters.user(OWNER_ID))
 @is_admin
 async def pause(_, message):
     await message.delete()
