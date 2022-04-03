@@ -3,11 +3,11 @@ from pyrogram import filters
 from Script.Cache.admin_check import *
 import asyncio
 from Script.Plugin.Helpers.PyTgCalls import skip_current_song, skip_item
-from Script.Plugin.Helpers.queues import QUEUE 
+from Script.Plugin.Helpers.Player import QUEUE 
+from Script.Config import OWNER_ID
 
 
-
-@bot.on_message(filters.command("skip") & filters.group)
+@bot.on_message(filters.command("skip") & filters.group & filters.user(OWNER_ID))
 @is_admin
 async def skip(_, message):
     await message.delete()
