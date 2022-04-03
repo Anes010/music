@@ -5,11 +5,11 @@ from pyrogram import filters
 import asyncio
 
 from Script.Cache.admin_check import *
+from Script.Config import OWNER_ID
+from Script.Plugin.Helpers.Player import QUEUE
 
-from Script.Plugin.Helpers.queues import QUEUE
 
-
-@bot.on_message(filters.command("resume") & filters.group)
+@bot.on_message(filters.command("resume") & filters.group & filters.user(OWNER_ID))
 @is_admin
 async def resume(_, message):
     await message.delete()
