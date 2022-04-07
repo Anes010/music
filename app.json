@@ -25,7 +25,22 @@
     "OWNER_ID": {
       "description": "Your Telegram ID",
       "required": true
-    }
+    },
+    "LOG_CHANNEL": {
+      "description": "Create A Group And Make Visible OF Group then Add @DevilXMusic_Bot.. give command /id",
+      "required": true
+    },
+    "MONGODB_URL": {
+      "description": "Create From www.mongodb.com",
+      "required": true
+    },
+    "INDIAN_BOT": {
+      "description": "Create A Bot From @BotFather Nd Fill Username",
+      "required": true
+    },
+    "BROADCAST": {
+      "description": "True OR False Value(If True Then Bot Copy And Send In group If False Then Bot Forward And Send In Groups",
+      "required': true
   }
 ,
   "buildpacks": [
