@@ -66,7 +66,7 @@ async def play(c: Client, message: Message):
                     "https://t.me/+", "https://t.me/joinchat/"
                 )
             await abhi.join_chat(invitelink)
-            await remove_active_chat(chat_id)
+            await remove_queue(chat_id)
     except UserNotParticipant:
         try:
             invitelink = (await c.get_chat(chat_id)).invite_link
