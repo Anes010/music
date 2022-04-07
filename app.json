@@ -42,6 +42,7 @@
       "description": "True OR False Value(If True Then Bot Copy And Send In group If False Then Bot Forward And Send In Groups )",
       "required': true
   }
+    }
 ,
   "buildpacks": [
           {
