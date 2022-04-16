@@ -119,7 +119,7 @@ async def play(c: Client, message: Message):
         except:
             omfo, playlink = await ded(link)
             if omfo == "0":
-                return await m.edit("❗️YTDL ERROR !!!")               
+                return await m.edit("❗️YouTuBe error ReTry...!!!")               
     except Exception as e:
         return await m.edit(str(e))
     
