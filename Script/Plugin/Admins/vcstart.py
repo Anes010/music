@@ -1,3 +1,24 @@
+import glob
+import json
+import logging
+import asyncio
+
+from pytgcalls.types import Update
+from pyrogram.raw.base import Update
+
+from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
+from pyrogram import filters, Client
+from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
+from pyrogram.types import Message
+from Script.Plugin.Helpers.Player import QUEUE, add_to_queue, get_queue, clear_queue, pop_an_item, remove_queue
+from Script.Cache.admin_check import *
+from Script.assistant.TgCalls.Clients import bot, user, abhi
+
+
+
+    
+LIVE_CHATS = []
+
 @Client.on_message(command("call") & other_filters)
 @authorized_users_only
 async def start_group_call(c: Client, m: Message):
