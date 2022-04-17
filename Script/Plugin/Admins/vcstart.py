@@ -17,7 +17,6 @@ from Script.assistant.TgCalls.Clients import bot, user, abhi
 
 
     
-LIVE_CHATS = []
 
 @Client.on_message(command("call") & other_filters)
 @authorized_users_only
