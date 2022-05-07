@@ -1,7 +1,6 @@
 import datetime
 
 import motor.motor_asyncio
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
 from Script.Config import MONGODB_URL, INDIAN_BOT
 
