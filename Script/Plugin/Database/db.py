@@ -17,10 +17,12 @@ class Database:
         return dict(
             id=id,
             join_date=datetime.date.today().isoformat(),
-            upload_as_doc=False,
-            thumbnail=None,
-            generate_ss=False,
-            generate_sample_video=False
+            ban_status=dict(
+                is_banned=False,
+                ban_duration=0,
+                banned_on=datetime.date.max.isoformat(),
+                ban_reason="",
+            ),
         )
 
     async def add_user(self, id):
