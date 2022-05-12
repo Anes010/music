@@ -31,7 +31,7 @@ from Script.assistant.TgCalls.Clients import me_abhi
     
 LIVE_CHATS = []
 
-@bot.on_message(filters.command(["play", "vplay"]) & filters.group)
+@bot.on_message(filters.command(["play", "شغل"]) & filters.group)
 async def play(c: Client, message: Message):
     await message.delete()
     user_id = message.from_user.id
@@ -90,7 +90,7 @@ async def play(c: Client, message: Message):
         damn = AudioPiped
         ded = yt_audio
         doom = "Audio"
-    elif state == "vplay":
+    elif state == "شغل":
         damn = AudioVideoPiped
         ded = yt_video
         doom = "Video"
