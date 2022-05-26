@@ -30,14 +30,14 @@ async def skip_current_song(chat_id):
             type = chat_queue[1][4]
             Q = chat_queue[1][5]
             thumb = chat_queue[1][6]
-            if type == "Audio":
+            if type == "اغنيه":
                 await user.change_stream(
                     chat_id,
                     AudioPiped(
                         playlink,
                     ),
                 )
-            elif type == "Video":
+            elif type == "فيديو":
                 if Q == "high":
                     hm = HighQualityVideo()
                 elif Q == "mid":
