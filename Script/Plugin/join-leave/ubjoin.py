@@ -6,7 +6,7 @@ from Script.Config import OWNER_ID
 from Script.Cache.admin_check import *
 
 
-@Client.on_message(filters.command(["userbotjoin", "ubjoin"]) & ~filters.private & ~filters.bot & filters.user(OWNER_ID))
+@Client.on_message(filters.command(["انضم", "ubjoin"]) & ~filters.private & ~filters.bot & filters.user(OWNER_ID))
 @is_admin
 async def ubjoin(client, message):
     chat_id = message.chat.id
@@ -19,7 +19,7 @@ async def ubjoin(client, message):
     try:
         user = await abhi.get_me()
     except:
-        user.first_name = "indian music"
+        user.first_name = "arabi music"
     try:
         await abhi.join_chat(invitelink)
         await abhi.send_message(message.chat.id, "🤖: i'm joined here for playing music on voice chat")
