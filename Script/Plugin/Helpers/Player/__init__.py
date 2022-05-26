@@ -10,10 +10,10 @@ from .PyTgCalls import skip_current_song, skip_item
 
 # will set it true for functioning of automatic leave
 
-AUTO_LEAVING = getenv("AUTO_LEAVING_ASSISTANT", True)
+AUTO_LEAVING = getenv("مغادره تلقائيه", True)
 
 # Time after which you're assistant account will leave chats automatically.
 
 AUTO_LEAVE_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "1200")
+    getenv("وقت مغادره التلقائيه", "1200")
 )
