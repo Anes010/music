@@ -9,7 +9,7 @@ async def start(client, m: Message):
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                      InlineKeyboardButton(
-                                            "Support", url="t.me/GodEyeSupport")
+                                            "Support", url="t.me/N_B_10")
                                     ]]
                             ))
    else:
