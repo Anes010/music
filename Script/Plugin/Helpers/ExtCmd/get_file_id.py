@@ -4,19 +4,19 @@ from pyrogram.types import Message
 def get_file_id(msg: Message):
     if msg.media:
         for message_type in (
-            "photo",
-            "animation",
-            "audio",
-            "document",
-            "video",
-            "video_note",
-            "voice",
-            "contact",
+            "صوره",
+            "متحركه",
+            "اغنيه",
+            "مستند",
+            "فيديو",
+            "فيديو_ملاحظه",
+            "صوتيه",
+            "الاتصال",
             "dice",
-            "poll",
-            "location",
-            "venue",
-            "sticker",
+            "استصلاع",
+            "الموقع",
+            "موقع",
+            "ملصقات",
         ):
             obj = getattr(msg, message_type)
             if obj:
