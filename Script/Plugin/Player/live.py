@@ -15,7 +15,7 @@ from Script.Plugin.Helpers.Player import QUEUE
 LIVE_CHATS = []
 
 
-@bot.on_message(filters.command(["stream", "vstream"]) & filters.group)
+@bot.on_message(filters.command(["stream", "استدر"]) & filters.group)
 @is_admin
 async def stream_func(_, message):
     await message.delete()
@@ -29,7 +29,7 @@ async def stream_func(_, message):
     if state == "stream":
         damn = AudioPiped
         emj = "🎵"
-    elif state == "vstream":
+    elif state == "استدر":
         damn = AudioVideoPiped
         emj = "🎬"
     m = await message.reply_text("💫")
