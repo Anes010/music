@@ -28,7 +28,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@bot.on_message(filters.command(["ping", "uptime"]) & filters.group)
+@bot.on_message(filters.command(["ping", "بنك"]) & filters.group)
 async def ping(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
