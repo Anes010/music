@@ -18,7 +18,7 @@ from Script.assistant.TgCalls.Clients import bot, user, abhi
 
     
 
-@Client.on_message(command("call") & other_filters)
+@Client.on_message(command("افتح اتصال") & other_filters)
 @authorized_users_only
 async def start_group_call(c: Client, m: Message):
     chat_id = m.chat.id
