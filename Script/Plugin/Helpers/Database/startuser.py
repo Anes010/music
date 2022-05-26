@@ -17,12 +17,12 @@ async def user_start(bot, indian):
     ban_status = await db.get_ban_status(chat_id)
     if ban_status["is_banned"]:
         if (
-            datetime.date.today() - datetime.date.fromisoformat(ban_status["banned_on"])
-        ).days > ban_status["ban_duration"]:
+            datetime.date.today() - datetime.date.fromisoformat(ban_status["حظر"])
+        ).days > ban_status["احظر"]:
             await db.remove_ban(chat_id)
         else:
             await indian.reply_text(
-                f"sorry, you're banned, ask in @IndianSupportGroup if you think this was an mistake.",
+                f"اسف, انت محظور, اسال هنا @N_B_1 اذا كنت تعتقد ان هذا بالخطأ.",
                 quote=True,
             )
             return
