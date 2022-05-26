@@ -7,7 +7,7 @@ def is_admin(func):
         is_admin = False
         try:
             user = await message.chat.get_member(message.from_user.id)
-            admin_strings = ("creator", "administrator")
+            admin_strings = ("رفع ادمن", "administrator")
             if user.status not in admin_strings:
                 is_admin = False
             else:
@@ -18,5 +18,5 @@ def is_admin(func):
         if is_admin:
             await func(client,message)
         else:
-            await message.reply("Only admins can execute this command!")
+            await message.reply("فقط المشرفين يمكنهم الاستخدام هذا الامر!")
     return oops
