@@ -93,7 +93,7 @@ async def play(c: Client, message: Message):
     elif state == "شغل":
         damn = AudioVideoPiped
         ded = yt_video
-        doom = "Video"
+        doom = "فيديو"
     if "low" in query:
         Q = "low"
     elif "mid" in query:
